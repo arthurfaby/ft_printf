@@ -6,19 +6,35 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:27:42 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/11 10:49:47 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/11 19:52:26 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(long long int n)
+static int	get_size(long long int n)
 {
+	int	count;
+
+	count = 0;
+	while (n)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
+}
+
+int	ft_putnbr(long long int n)
+{
+	int	ret;
+
+	ret = get_size(n);
 	if (n == -2147483648)
 	{
 		ft_putnbr(n / 10);
 		ft_putchar('8');
-		return ;
+		return (0);
 	}
 	if (n < 0)
 	{
@@ -32,4 +48,5 @@ void	ft_putnbr(long long int n)
 		ft_putnbr(n / 10);
 		ft_putnbr(n % 10);
 	}
+	return (ret);
 }
