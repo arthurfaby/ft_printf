@@ -6,13 +6,13 @@
 #    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 16:22:56 by afaby             #+#    #+#              #
-#    Updated: 2022/04/11 11:10:19 by afaby            ###   ########.fr        #
+#    Updated: 2022/04/12 10:36:46 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	libftprintf.a
 
-SRCS =	ft_printf.c ft_process.c ft_count.c ft_putptr.c
+SRCS =	ft_printf.c ft_process.c ft_count.c
 
 OBJS =	$(SRCS:.c=.o)
 

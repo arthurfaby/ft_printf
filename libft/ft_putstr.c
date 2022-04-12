@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 17:59:20 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/11 19:52:13 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/12 10:32:51 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@ int	ft_putstr(char *s)
 {
 	int	ret;
 
-	ret = ft_strlen(s);
 	if (!s)
-		return (0);
+	{
+		ft_putstr("(null)");
+		return (6);
+	}
+	ret = ft_strlen(s);
 	while (*s)
 		write(1, s++, 1);
 	return (ret);

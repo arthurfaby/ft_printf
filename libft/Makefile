@@ -6,7 +6,7 @@
 #    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 19:07:12 by afaby             #+#    #+#              #
-#    Updated: 2022/04/11 11:11:16 by afaby            ###   ########.fr        #
+#    Updated: 2022/04/12 17:44:50 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS =	ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c \
 		ft_putstr.c		ft_putnbr_base.c ft_lstnew.c	ft_lstlast.c \
 		ft_lstsize.c	ft_lstadd_front.c ft_lstadd_back.c ft_lstiter.c \
 		ft_lstdelone.c	ft_lstclear.c 	ft_lstmap.c		ft_putptr.c \
+		ft_putnbr_base_ull.c			
 
 	
 

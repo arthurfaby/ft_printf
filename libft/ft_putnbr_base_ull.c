@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_ull.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:55:44 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/12 10:50:44 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/12 17:45:17 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,26 +36,15 @@ static int	check_base_validity(char *str)
 	return (1);
 }
 
-int	ft_putnbr_base(long long int nbr, char *base)
+int	ft_putnbr_base_ull(unsigned long long int nbr, char *base)
 {
-	int		base_len;
-	int		ret;
+	unsigned long long int		base_len;
+	int							ret;
 
 	ret = 0;
 	if (check_base_validity(base))
 	{
 		base_len = ft_strlen(base);
-		if (nbr == -2147483648)
-		{
-			ret += ft_putnbr_base(nbr / base_len, base);
-			ret += ft_putchar(base[nbr % base_len]);
-			return (ret);;
-		}
-		if (nbr < 0)
-		{
-			ret += ft_putchar('-');
-			nbr *= -1;
-		}
 		if (nbr < base_len)
 			ret += ft_putchar(base[nbr]);
 		else
