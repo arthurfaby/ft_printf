@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:56:47 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/12 17:44:38 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/13 10:47:18 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_putnbr(long long int n);
 int		ft_putnbr_base(long long int nbr, char *base);
+int		ft_putnbr_base_u(unsigned int nbr, char *base);
 int		ft_putnbr_base_ull(unsigned long long int nbr, char *base);
 int		ft_putptr(void *ptr);
 char	*ft_strjoin(const char *s1, const char *s2);
