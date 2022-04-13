@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:55:44 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/13 10:48:04 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/13 13:25:18 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	ft_putnbr_base(long long int nbr, char *base)
 		{
 			ft_putnbr_base(nbr / 10, base);
 			ft_putchar('8');
+			return (11);
 		}
 		nbr *= -1;
 	}
