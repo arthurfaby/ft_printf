@@ -6,7 +6,7 @@
 #    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 19:07:12 by afaby             #+#    #+#              #
-#    Updated: 2022/04/13 10:47:39 by afaby            ###   ########.fr        #
+#    Updated: 2022/04/27 09:54:17 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,6 @@ re: fclean all
 	$(CC) -g $(FLAGS) -c $<
  
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJS)
 
 .PHONY: all clean fclean re bonus

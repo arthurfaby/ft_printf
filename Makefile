@@ -6,7 +6,7 @@
 #    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 16:22:56 by afaby             #+#    #+#              #
-#    Updated: 2022/04/12 10:36:46 by afaby            ###   ########.fr        #
+#    Updated: 2022/04/27 09:55:01 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM     = rm -f
 
-AR     = ar rc
+AR     = ar rcs
 
 all: $(NAME)
 
@@ -33,7 +33,8 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	make -C libft
-	$(AR) $(NAME) $(OBJS) libft/*.o
+	cp libft/libft.a ./$(NAME)
+	$(AR) $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
