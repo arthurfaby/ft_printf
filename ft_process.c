@@ -6,7 +6,7 @@
 /*   By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 17:16:52 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/13 16:08:44 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/27 16:48:10 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,7 @@ int	ft_process(const char *s, va_list args)
 			str++;
 		}
 		else
-		{
-			ret++;
-			ft_putchar(*str);
-		}
+			ret += ft_putchar(*str);
 		str++;
 	}
 	return (ret);
